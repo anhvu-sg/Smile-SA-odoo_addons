@@ -4,7 +4,7 @@
 
 {
     "name": "Database Upgrade",
-    "version": "13.0.1",
+    "version": "15.0.1",
     "depends": ["web"],
     "author": "Smile",
     "license": 'AGPL-3',
@@ -14,11 +14,15 @@
     "category": 'Tools',
     "sequence": 20,
     "data": [
-        "views/webclient_templates.xml",
     ],
-    "qweb": [
-        "static/src/xml/code_version.xml",
-    ],
+    "assets": {
+        "web.assets_backend": [
+            "/smile_upgrade/static/src/js/code_version.js",
+        ],
+        "web.assets_qweb": [
+            "/smile_upgrade/static/src/xml/code_version.xml",
+        ],
+    },
     "auto_install": True,
     "installable": True,
     "application": False,
